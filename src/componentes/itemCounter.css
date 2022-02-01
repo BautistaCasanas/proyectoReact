@@ -1,0 +1,18 @@
+.itemCounter{
+    margin: 0px;
+    text-align: center;
+}
+.counter{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-around;
+}
+.numCounter{
+padding: 0px;
+margin: 5px;
+}
+.BotonCounter{
+    height: 35px;
+}
+
