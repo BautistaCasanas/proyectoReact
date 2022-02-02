@@ -13,7 +13,7 @@ function ItemDetailComponent() {
         fetch('https://fakestoreapi.com/products')
         .then(res=>res.json())
         .then(json=>setDetail(json));
-        setItem(detail.find(item=> item.id === 3));
+        setItem(detail.find(item=> item.id === 16));
     },[])
 
   return <>
