@@ -12,7 +12,6 @@ const ItemDetail=({item})=> {
       <CardMedia
         component="img"
         image={item?.image}
-        height="150"
         alt="green iguana"
       />
       <CardContent>
