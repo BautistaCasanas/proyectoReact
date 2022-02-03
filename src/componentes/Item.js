@@ -6,40 +6,37 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import ItemCount from './itemCount';
-
 import './Item.css';
-
+import {Link} from "react-router-dom";
 
 const Item =({item})=> {
 
-
   return (
-    <Card  sx={{ maxWidth: 270, margin:"30px"}}>
-    <CardMedia
+    <Card  sx={{ width: 270, height:570, margin:"30px",boxShadow:" 0 10px 10px rgba(0, 0, 0, 0.4)", borderRadius:"20px"}}>
+    <CardMedia sx={{objectFit:"contain"}}
         component="img"
-        height="200"
         image= {item.image}
+        height={200}
         alt="Productos"
       />
       <CardContent>
-        <Typography gutterBottom variant="h6" component="div">
-        {item.title}
+        <div className='titleCard'>
+        <Typography variant="h7" component="div">
+        <b>{item.title}</b>
         </Typography>
-        {/* <Typography fontSize={17} variant="body2" color="text.secondary">
-          {item.description}
-        </Typography> */}
+        </div>
         <br></br>
         <Typography fontSize={17} variant="body2" color="text.secondary">
           <b>${item.price}</b>
         </Typography>
         <div className="ItemCounter">
         <ItemCount/>
-      
         </div>
       </CardContent>
 
-      <CardActions>
-        <Button color="success" variant='contained' size="small">Comprar</Button>
+      <CardActions sx={{display:"flex", margin:"20px"}}>
+        <Button color="success" variant='contained' size="small">Add Cart</Button>
+        <Link to={`/detail/${item.id}`}><Button sx={{margin:"10px"}} variant='contained' size="small">+info</Button></Link>
       </CardActions>
     </Card>
 

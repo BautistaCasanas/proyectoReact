@@ -3,19 +3,25 @@ import './itemCounter.css';
 
 const ItemCount = () => {
 
-    let stock = parseInt(10);
-    const [counter, setCounter] = React.useState(parseInt(0));
+    let stock = parseInt(5);
+    let Initial= 1;
+
+    const [counter, setCounter] = React.useState(parseInt(Initial));
+    const [mensaje, setMensaje] = React.useState("");
 
     const aumentar =()=>{
         if (stock > counter) {
             setCounter(counter + 1);
         }else{
-            console.log("No hay Stock disponible")
+            setMensaje("No hay mas Stock!")
+            setTimeout(() => {
+                setMensaje("")
+            }, 2000);
         }
     }
 
     const disminuir = () => {
-        if (counter > 0) {
+        if (counter > Initial) {
             setCounter(counter - 1);
             }
         };
@@ -31,6 +37,7 @@ return <>
     <button className="BotonCounter" onClick={aumentar}>➕</button>
     <p className="numCounter"><b>{counter}</b></p>
     <button className="BotonCounter" onClick={disminuir}>➖</button>
+    <p><b>{mensaje}</b></p>
     </div>
     
 

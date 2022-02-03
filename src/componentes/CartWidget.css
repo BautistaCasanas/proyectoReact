@@ -1,5 +1,6 @@
-#img-Carrito-Compras{
-    width: 71px;
-    margin-top: 16px;
+.cartWidget{
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }

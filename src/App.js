@@ -1,25 +1,30 @@
 //Componentes
 import NavBar from './componentes/NavBar';
-import ItemListContainer from './componentes/ItemListContainer';
+
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
+
+//views
+import Home from './views/Home';
+import Products from './views/Products';
+import Contact from './views/Contact';
 import ItemDetailComponent from './componentes/ItemDetailComponent';
-
-// APRENDER=> sisi: spread operator, destructuring, promise (promesas), let, var, arrow functions, string como template literals, map, métodos de arrays (foreach, map, find, filter)
-
-
 
 const App = () => {
 
   return (
     <>
+    <Router>
       <header>
         <NavBar/>
       </header>
 
-      <main>
-        <ItemListContainer  greetings="Bienvenidos a AllShop" />
-        <br/>
-        <ItemDetailComponent/>
-      </main>
+      <Routes>
+        <Route path="/" element={<Home/>}></Route>
+        <Route path="/Products" element={<Products/>}></Route>
+        <Route path="/Contact" element={<Contact/>}></Route>
+        <Route path="/detail/:itemID" element={<ItemDetailComponent/>}></Route>
+      </Routes>
+      </Router>
     </>
   );
 }

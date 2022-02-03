@@ -1,9 +1,10 @@
 import './CartWidget.css'
-import img from '../img/imgCarritoCompras.png';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 const CartWidget = () => {
-  return <div>
-  <img src={img}  id="img-Carrito-Compras" alt='img-Carrito-Compras'/>
+
+  return <div className='cartWidget'>
+  <p>0</p><ShoppingCartOutlinedIcon/>
   </div>;
 };
 

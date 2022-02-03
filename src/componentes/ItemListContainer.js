@@ -19,11 +19,7 @@ const ItemListContainer = (props) => {
     },[])
 
 return <>
-    <div>
-        <center>
-            <h1 className="titulos">{props.greetings}</h1>
-        </center>
-    </div>
+    
     <div>
     {isLoading? <Spinner/>: <ItemList items={items}/>}   
     </div>

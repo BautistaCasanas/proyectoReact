@@ -14,5 +14,6 @@ margin: 5px;
 }
 .BotonCounter{
     height: 35px;
+    cursor: pointer;
 }
 
