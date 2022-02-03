@@ -36,7 +36,7 @@ const Item =({item})=> {
 
       <CardActions sx={{display:"flex", margin:"20px"}}>
         <Button color="success" variant='contained' size="small">Add Cart</Button>
-        <Link to={`/detail/${item.id}`}><Button sx={{margin:"10px"}} variant='contained' size="small">+info</Button></Link>
+        <Link  to={`/detail/${item.id}`}><Button sx={{margin:"10px"}} variant='contained' size="small">+info</Button></Link>
       </CardActions>
     </Card>
 
