@@ -1,7 +1,10 @@
 import * as React from 'react';
 import IconButton from '@mui/material/IconButton';
-import MenuItem from '@mui/material/MenuItem';
+
 import Menu from '@mui/material/Menu'; 
+import LoginAuth0 from './LoginAuth0';
+import LogoutAuth0 from './LogoutAuth0';
+import Profile from './Profile';
 
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 
@@ -16,6 +19,9 @@ const Login = () => {
       setAnchorEl(null);
     };
   
+    
+
+
     return <div>
 
                 <IconButton
@@ -43,8 +49,9 @@ const Login = () => {
                   open={Boolean(anchorEl)}
                   onClose={handleClose}
                 >
-                  <MenuItem onClick={handleClose}>Login</MenuItem>
-                  <MenuItem onClick={handleClose}>Register</MenuItem>
+                  <Profile/>
+                  <LoginAuth0/>
+                  <LogoutAuth0/>
                 </Menu>
               </div>
   };

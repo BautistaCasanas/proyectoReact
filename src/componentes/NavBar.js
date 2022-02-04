@@ -15,7 +15,6 @@ import MenuItem from '@mui/material/MenuItem';
 import {Link} from "react-router-dom";
 
 
-
 const NavBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   
@@ -92,7 +91,7 @@ const NavBar = () => {
           <MenuItem component={Link} to="/Products">Products</MenuItem>
           <MenuItem component={Link} to="/Contact">Contact</MenuItem>
           </Box>
-            <CartWidget/>
+            <CartWidget></CartWidget>
         </Toolbar>
       </Container>
     </AppBar>

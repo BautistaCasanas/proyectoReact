@@ -6,7 +6,7 @@ import Spinner from './Spinner';
 const ItemDetailComponent=()=> {
 
     const [item, setItem]=useState({});
-    const [items, setItems]=useState([]);
+    // const [items, setItems]=useState([]);
     const [loading, setLoading]=useState(true);
 
     let {itemID}= useParams();
