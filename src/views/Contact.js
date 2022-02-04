@@ -2,9 +2,13 @@
 
 const Contact = () => {
 
-    return <div>
+    return <>
         <h1>Contact</h1>
-    </div>;
+
+        
+
+
+    </>
   };
   
   export default Contact;

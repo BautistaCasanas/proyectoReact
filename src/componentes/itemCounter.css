@@ -1,6 +1,8 @@
 .itemCounter{
     margin: 0px;
     text-align: center;
+    
+   
 }
 .counter{
     display: flex;
@@ -15,5 +17,7 @@ margin: 5px;
 .BotonCounter{
     height: 35px;
     cursor: pointer;
+    
+    
 }
 

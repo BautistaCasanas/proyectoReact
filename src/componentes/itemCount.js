@@ -13,7 +13,7 @@ const ItemCount = () => {
         if (stock > counter) {
             setCounter(counter + 1);
         }else{
-            setMensaje("No hay mas Stock!")
+            setMensaje("There is no more stock!")
             setTimeout(() => {
                 setMensaje("")
             }, 2000);
