@@ -10,9 +10,10 @@ import './ItemDetail.css';
 
 
 
+
 const ItemDetail=({item})=> {
   return (<><div className='cardDetail'>
-    <Card sx={{ width:"1000px",margin:"50px", display:"flex",borderRadius:"20px",boxShadow:" 0 10px 10px rgba(0, 0, 0, 0.4)"}}>
+    <Card sx={{ width:"50%",margin:"50px", display:"flex", flexFlow:"column", borderRadius:"20px",boxShadow:" 0 10px 10px rgba(0, 0, 0, 0.4)", gap:"20px"}}>
 
       <CardMedia sx={{objectFit:"contain"}}
         component="img"
@@ -31,7 +32,7 @@ const ItemDetail=({item})=> {
           <b>${item?.price}</b>
         </Typography>
       </CardContent>
-      <ItemCount></ItemCount>
+      <ItemCount sx={{display:"flex", justifyContent:"center"}}></ItemCount>
       <br/>
       <CardActions sx={{marginLeft:"10px"}}>
         <Button  color="success" variant='contained' size="small">Add Cart</Button>
@@ -42,4 +43,6 @@ const ItemDetail=({item})=> {
     </>
   );
 }
+
+
 export default ItemDetail;

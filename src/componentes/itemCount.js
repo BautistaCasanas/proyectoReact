@@ -37,8 +37,8 @@ return <>
     <button className="BotonCounter" onClick={aumentar}>➕</button>
     <p className="numCounter"><b>{counter}</b></p>
     <button className="BotonCounter" onClick={disminuir}>➖</button>
-    <p><b>{mensaje}</b></p>
     </div>
+    <p><b>{mensaje}</b></p>
     
 
   </div>

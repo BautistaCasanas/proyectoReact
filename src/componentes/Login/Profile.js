@@ -9,11 +9,18 @@ const Profile=()=> {
     if(isLoading){
         return <p>Loading..</p>
     }
-
+    console.log(user)
     return(<>
         {isAuthenticated && ( 
-            <div className='nameProfile'>
-            <b>{user.name}</b>
+            <div className='containerProfile'>
+
+            <div><img src={user.picture} width="40px" alt="LogoProfile"/></div>
+
+            <div className='nameProfileContainer'>
+            <b className='nameProfile'>{user.given_name}</b>
+                <b className='nameProfile'>{user.family_name}</b>
+            </div>
+
             </div>)}
        </>)
 }

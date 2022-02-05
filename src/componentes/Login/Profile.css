@@ -1,4 +1,15 @@
+.containerProfile{
+    margin: 15px;
+    display: flex;
+    flex-flow: row;
+    gap: 10px;
+}
+
 .nameProfile{
-    margin: 10px;
-    
+    display: flex;
+    flex-flow: column;
+}
+
+.nameProfileContainer{
+    height: 50px;
 }

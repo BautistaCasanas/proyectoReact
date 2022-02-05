@@ -9,7 +9,13 @@ import ItemCount from './itemCount';
 import './Item.css';
 import {Link} from "react-router-dom";
 
+
+
+
+
 const Item =({item})=> {
+
+
 
   return (
     <Card  sx={{ width: 270, height:570, margin:"30px",boxShadow:" 0 10px 10px rgba(0, 0, 0, 0.4)", borderRadius:"20px"}}>
@@ -35,7 +41,7 @@ const Item =({item})=> {
       </CardContent>
 
       <CardActions sx={{display:"flex", margin:"20px"}}>
-        <Button color="success" variant='contained' size="small">Add Cart</Button>
+        <Button color="success" variant='contained'  size="small">Add Cart</Button>
         <Link  to={`/detail/${item.id}`}><Button sx={{margin:"10px"}} variant='contained' size="small">+info</Button></Link>
       </CardActions>
     </Card>
