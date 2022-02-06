@@ -1,5 +1,5 @@
 import React from "react";
-import Item from "./Item";
+import Item from "../ItemList/Item";
 import Box from '@mui/material/Box';
 
 

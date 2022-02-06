@@ -1,7 +1,7 @@
-import React,{useEffect, Suspense, lazy} from 'react';
+import React,{useEffect} from 'react';
 import './ItemListContainer.css';
-import ItemList from './ItemList';
-import Spinner from './Spinner';
+import ItemList from '../ItemList/ItemList';
+import Spinner from '../Spinner/Spinner';
 
 const ItemListContainer = (props) => {
 

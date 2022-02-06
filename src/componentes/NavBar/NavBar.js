@@ -1,6 +1,6 @@
 
-import CartWidget from '../componentes/CartWidget';
-import img from '../img/allShop.png';
+import CartWidget from '../CartWidget/CartWidget';
+import img from './allShop.png';
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';

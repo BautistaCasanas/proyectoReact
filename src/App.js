@@ -1,5 +1,5 @@
 //Componentes
-import NavBar from './componentes/NavBar';
+import NavBar from './componentes/NavBar/NavBar';
 
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 
@@ -7,7 +7,7 @@ import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import Home from './views/Home';
 import Products from './views/Products';
 import Contact from './views/Contact';
-import ItemDetailComponent from './componentes/ItemDetailComponent';
+import ItemDetailComponent from './componentes/ItemDetail/ItemDetailComponent';
 
 const App = () => {
 

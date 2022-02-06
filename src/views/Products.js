@@ -1,5 +1,5 @@
-import ItemListContainer from '../componentes/ItemListContainer';
-import ItemDetailComponent from '../componentes/ItemDetailComponent';
+import ItemListContainer from '../componentes/ItemList/ItemListContainer';
+
 
 const Products = () => {
 

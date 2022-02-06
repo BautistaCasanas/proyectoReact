@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import ItemDetail from './ItemDetail';
+import ItemDetail from '../ItemDetail/ItemDetail';
 import { useParams } from 'react-router';
-import Spinner from './Spinner';
+import Spinner from '../Spinner/Spinner';
 
 const ItemDetailComponent=()=> {
 

@@ -5,7 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import ItemCount from './itemCount';
+import ItemCount from '../ItemCount/itemCount';
 import './Item.css';
 import {Link} from "react-router-dom";
 
