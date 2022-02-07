@@ -1,13 +1,15 @@
 //Componentes
 import NavBar from './componentes/NavBar/NavBar';
-
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import NotFound from './componentes/NotFound/notFound';
+import ItemDetailComponent from './componentes/ItemDetail/ItemDetailComponent';
+
 
 //views
 import Home from './views/Home';
 import Products from './views/Products';
 import Contact from './views/Contact';
-import ItemDetailComponent from './componentes/ItemDetail/ItemDetailComponent';
+
 
 const App = () => {
 
@@ -23,6 +25,7 @@ const App = () => {
         <Route path="/Products" element={<Products/>}></Route>
         <Route path="/Contact" element={<Contact/>}></Route>
         <Route path="/detail/:itemID" element={<ItemDetailComponent/>}></Route>
+        <Route path="*" element={<NotFound/>} /> 
       </Routes>
       </Router>
     </>

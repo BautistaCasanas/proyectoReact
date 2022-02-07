@@ -1,0 +1,42 @@
+.main-Contacto{
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0%;
+}
+
+form{
+    width: 450px;
+    margin: auto;
+    margin-top: 50px;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border-radius: 7px;
+}
+
+
+input, textarea{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 17px;
+    border: none;
+}
+
+textarea{
+    min-height: 100px;
+    max-height: 200px;
+    max-width: 100%;
+
+}
+
+#boton{
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#boton :hover{
+    cursor: pointer;
+}
