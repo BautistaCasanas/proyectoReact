@@ -11,8 +11,6 @@ const Contact = () => {
             })
         }
 
-
-
     return <>
         <main className="main-Contacto">
         <form action="">
