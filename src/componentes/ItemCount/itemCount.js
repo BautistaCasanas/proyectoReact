@@ -1,4 +1,5 @@
 import React from "react";
+import Swal from 'sweetalert';
 import './itemCounter.css';
 
 const ItemCount = () => {
@@ -7,16 +8,18 @@ const ItemCount = () => {
     let Initial= 1;
 
     const [counter, setCounter] = React.useState(parseInt(Initial));
-    const [mensaje, setMensaje] = React.useState("");
+    // const [mensaje, setMensaje] = React.useState("");
 
     const aumentar =()=>{
         if (stock > counter) {
             setCounter(counter + 1);
         }else{
-            setMensaje("There is no more stock!")
-            setTimeout(() => {
-                setMensaje("")
-            }, 2000);
+            Swal({
+                title: 'Available',
+                text: 'You have exceeded the amount available',
+                icon: 'error',
+                
+            })
         }
     }
 
@@ -38,7 +41,7 @@ return <>
     <p className="numCounter"><b>{counter}</b></p>
     <button className="BotonCounter" onClick={disminuir}>➖</button>
     </div>
-    <p><b>{mensaje}</b></p>
+    {/* <p><b>{mensaje}</b></p> */}
     
 
   </div>
