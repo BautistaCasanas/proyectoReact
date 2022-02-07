@@ -2,3 +2,4 @@ AllShop es un ecommerce de productos diferentes, encontraras variedad en cuanto 
 Las librerias que use fue, materialUI, para el diseño. 
 React-router para las rutas.
 AuthO, para realizar el login y logout
+SweetAlert para poner alertas.
