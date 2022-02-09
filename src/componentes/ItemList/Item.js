@@ -28,7 +28,7 @@ const swalAlert =()=>{
   })
  }else{
   Swal({
-    title: "You have to login!",
+    title: "You have to login or register!",
     icon: "error",
     button: "OK",
   });

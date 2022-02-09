@@ -34,7 +34,6 @@ const ItemCount = ({stock, initial, onAdd}) => {
         };
 
 
-
 return <>
     
     <div className="itemCounter">
@@ -46,7 +45,7 @@ return <>
     <button className="BotonCounter" onClick={disminuir}>➖</button>
     </div>
     <CardActions sx={{display:"flex", margin:"20px"}}>
-        <Button sx={{margin:"0px",marginTop:"30px"}} color="success" onClick={onAdd} variant='contained' size="small">Add to Cart</Button>
+        <Button sx={{margin:"0px",marginTop:"30px"}} color="success" onClick={onAdd}  variant='contained' size="small">Add to Cart</Button>
       </CardActions>
     
     

@@ -11,22 +11,24 @@ import { useAuth0 } from '@auth0/auth0-react';
 import Swal from 'sweetalert';
 
 
-const ItemDetail=({item})=> {
+const ItemDetail=({item, counter})=> {
 
   const [cart, isInCart]= React.useState(false)
   const {isAuthenticated}= useAuth0();
+
+  //Borrar el Counter
   const onAdd = () => {
     if(isAuthenticated){
       isInCart(true)
     }else{
       Swal({
-        title: "You have to login!",
+        title: "You have to login or register!",
         icon: "error",
         button: "OK",
       });
     }
-  
     }
+  
 
   return (<><div className='cardDetail'>
     <Card sx={{ width:"50%",margin:"50px", display:"flex", flexFlow:"column", borderRadius:"20px",boxShadow:" 0 10px 10px rgba(0, 0, 0, 0.4)", gap:"20px"}}>
@@ -50,7 +52,7 @@ const ItemDetail=({item})=> {
       </CardContent>
       <div>
       {!cart ?<ItemCount sx={{display:"flex", justifyContent:"center"}} onAdd={onAdd}/>
-      : <Link to={`/Cart`}><Button sx={{margin:"10px"}} color="success" variant='contained' size="medium">Finish Buying</Button></Link>}
+      : <Link to={`/Cart`}><Button sx={{margin:"10px"}} color="success" variant='contained'  size="medium">Finish Buying</Button></Link>}
       </div>
       <br/>
     </Card>
