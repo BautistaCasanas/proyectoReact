@@ -1,7 +1,9 @@
 .titleCard{
     height: 70px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .ItemCounter{
-    margin: 10px;
+    margin-top: 50px;
 }

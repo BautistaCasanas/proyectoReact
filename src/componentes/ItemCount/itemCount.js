@@ -1,13 +1,17 @@
 import React from "react";
 import Swal from 'sweetalert';
+import CardActions from '@mui/material/CardActions';
+import Button from '@mui/material/Button';
+
 import './itemCounter.css';
 
-const ItemCount = () => {
+const ItemCount = ({stock, initial, onAdd}) => {
 
-    let stock = parseInt(5);
-    let Initial= 1;
+    stock = parseInt(5);
+    initial= 1;
 
-    const [counter, setCounter] = React.useState(parseInt(Initial));
+    const [counter, setCounter] = React.useState(parseInt(initial));
+   
     
 
     const aumentar =()=>{
@@ -24,7 +28,7 @@ const ItemCount = () => {
     }
 
     const disminuir = () => {
-        if (counter > Initial) {
+        if (counter > initial) {
             setCounter(counter - 1);
             }
         };
@@ -34,13 +38,16 @@ const ItemCount = () => {
 return <>
     
     <div className="itemCounter">
-    <p><b>Stock:</b><b>  {stock}</b></p>
-
+    <div><b>Stock:</b><b>{stock}</b></div>
+    <br/>
     <div className="counter">
     <button className="BotonCounter" onClick={aumentar}>➕</button>
-    <p className="numCounter"><b>{counter}</b></p>
+    <div className="numCounter"><b>{counter}</b></div>
     <button className="BotonCounter" onClick={disminuir}>➖</button>
     </div>
+    <CardActions sx={{display:"flex", margin:"20px"}}>
+        <Button sx={{margin:"0px",marginTop:"30px"}} color="success" onClick={onAdd} variant='contained' size="small">Add to Cart</Button>
+      </CardActions>
     
     
 

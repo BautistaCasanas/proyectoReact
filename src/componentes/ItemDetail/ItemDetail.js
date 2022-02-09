@@ -1,17 +1,33 @@
 import * as React from 'react';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import ItemCount from '../ItemCount/itemCount';
+import Button from '@mui/material/Button';
+import {Link} from "react-router-dom";
 import './ItemDetail.css';
-
-
+import { useAuth0 } from '@auth0/auth0-react';
+import Swal from 'sweetalert';
 
 
 const ItemDetail=({item})=> {
+
+  const [cart, isInCart]= React.useState(false)
+  const {isAuthenticated}= useAuth0();
+  const onAdd = () => {
+    if(isAuthenticated){
+      isInCart(true)
+    }else{
+      Swal({
+        title: "You have to login!",
+        icon: "error",
+        button: "OK",
+      });
+    }
+  
+    }
+
   return (<><div className='cardDetail'>
     <Card sx={{ width:"50%",margin:"50px", display:"flex", flexFlow:"column", borderRadius:"20px",boxShadow:" 0 10px 10px rgba(0, 0, 0, 0.4)", gap:"20px"}}>
 
@@ -32,11 +48,11 @@ const ItemDetail=({item})=> {
           <b>${item?.price}</b>
         </Typography>
       </CardContent>
-      <ItemCount sx={{display:"flex", justifyContent:"center"}}></ItemCount>
+      <div>
+      {!cart ?<ItemCount sx={{display:"flex", justifyContent:"center"}} onAdd={onAdd}/>
+      : <Link to={`/Cart`}><Button sx={{margin:"10px"}} color="success" variant='contained' size="medium">Finish Buying</Button></Link>}
+      </div>
       <br/>
-      <CardActions sx={{marginLeft:"10px"}}>
-        <Button  color="success" variant='contained' size="small">Add Cart</Button>
-      </CardActions>
     </Card>
     </div>
     {console.log(item)}
