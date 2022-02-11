@@ -5,18 +5,16 @@ import Button from '@mui/material/Button';
 
 import './itemCounter.css';
 
-const ItemCount = ({stock, initial, onAdd}) => {
+const ItemCount = ({stock, initial, onAdd, item}) => {
 
-    stock = parseInt(5);
-    initial= 1;
 
-    const [counter, setCounter] = React.useState(parseInt(initial));
+    const [qty, setCounter] = React.useState(parseInt(initial));
    
     
 
     const aumentar =()=>{
-        if (stock > counter) {
-            setCounter(counter + 1);
+        if (stock > qty) {
+            setCounter(qty + 1);
         }else{
             Swal({
                 title: 'Available',
@@ -28,8 +26,8 @@ const ItemCount = ({stock, initial, onAdd}) => {
     }
 
     const disminuir = () => {
-        if (counter > initial) {
-            setCounter(counter - 1);
+        if (qty > initial) {
+            setCounter(qty - 1);
             }
         };
 
@@ -41,11 +39,11 @@ return <>
     <br/>
     <div className="counter">
     <button className="BotonCounter" onClick={aumentar}>➕</button>
-    <div className="numCounter"><b>{counter}</b></div>
+    <div className="numCounter"><b>{qty}</b></div>
     <button className="BotonCounter" onClick={disminuir}>➖</button>
     </div>
     <CardActions sx={{display:"flex", margin:"20px"}}>
-        <Button sx={{margin:"0px",marginTop:"30px"}} color="success" onClick={onAdd}  variant='contained' size="small">Add to Cart</Button>
+        <Button sx={{margin:"0px",marginTop:"30px"}} color="success" onClick={()=>onAdd({item,qty})}  variant='contained' size="small">Add to Cart</Button>
       </CardActions>
     
     

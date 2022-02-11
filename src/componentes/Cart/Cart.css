@@ -1,0 +1,14 @@
+
+.cartItems{
+    margin: 10px;
+}
+.ulCartItems{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.dataItemCart{
+    width: 300px;
+    margin: 5px;
+    margin-left: 100px;
+}

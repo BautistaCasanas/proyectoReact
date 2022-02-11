@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useContext } from "react";
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
@@ -9,17 +9,21 @@ import {Link} from "react-router-dom";
 import './ItemDetail.css';
 import { useAuth0 } from '@auth0/auth0-react';
 import Swal from 'sweetalert';
+import { CartContext } from "../../context/CartContext";
 
 
-const ItemDetail=({item, counter})=> {
+
+const ItemDetail=({item, initial, stock})=> {
 
   const [cart, isInCart]= React.useState(false)
   const {isAuthenticated}= useAuth0();
+  const {addItem} =useContext(CartContext)
 
-  //Borrar el Counter
-  const onAdd = () => {
+
+  const onAdd = ({item,qty}) => {
     if(isAuthenticated){
-      isInCart(true)
+      isInCart(true);
+      addItem({item,qty})
     }else{
       Swal({
         title: "You have to login or register!",
@@ -28,7 +32,8 @@ const ItemDetail=({item, counter})=> {
       });
     }
     }
-  
+
+    
 
   return (<><div className='cardDetail'>
     <Card sx={{ width:"50%",margin:"50px", display:"flex", flexFlow:"column", borderRadius:"20px",boxShadow:" 0 10px 10px rgba(0, 0, 0, 0.4)", gap:"20px"}}>
@@ -51,7 +56,7 @@ const ItemDetail=({item, counter})=> {
         </Typography>
       </CardContent>
       <div>
-      {!cart ?<ItemCount sx={{display:"flex", justifyContent:"center"}} onAdd={onAdd}/>
+      {!cart ?<ItemCount sx={{display:"flex", justifyContent:"center"}} stock={parseInt(5)} initial={1} onAdd={onAdd}/>
       : <Link to={`/Cart`}><Button sx={{margin:"10px"}} color="success" variant='contained'  size="medium">Finish Buying</Button></Link>}
       </div>
       <br/>
