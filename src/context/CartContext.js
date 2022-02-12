@@ -7,8 +7,7 @@ export const CartProvider =({children})=> {
 
 
     const addItem = ({item,qty}) => {
-        setItems([...items,{...item,qty: qty}])
-        
+        setItems([...items,{...item,qty: qty}]);
     }
 
 

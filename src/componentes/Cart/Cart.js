@@ -14,9 +14,9 @@ const Cart=()=> {
 
       <div>
         {
-          items.map((item) => {
+          items.map((item,index) => {
             return(
-            <div className='cartItems'>
+            <div className='cartItems' key={index}>
 
             <ul className='ulCartItems'>
             
@@ -25,6 +25,7 @@ const Cart=()=> {
               <div className='dataItemCart'>
               <p><b>{item.title}</b></p>
               <p>${item.price}</p>
+              <p>{item.qty}</p>
               </div>
 
             </ul>
