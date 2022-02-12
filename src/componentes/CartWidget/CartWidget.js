@@ -8,10 +8,14 @@ import { CartContext } from '../../context/CartContext';
 
 const CartWidget = () => {
   const {items} = useContext(CartContext);
-  console.log(items)
+  let itemsInCart=0;
+
+  items.map((item)=>{
+    itemsInCart = itemsInCart + item.qty;
+  })
 
   return <div className='cartWidget'>
-  <p>{items.length}</p><Link  to={"/Cart"}><ShoppingCartOutlinedIcon/></Link>
+  <p>{itemsInCart}</p><Link  to={"/Cart"}><ShoppingCartOutlinedIcon/></Link>
   <Login/>
   </div>;
 };

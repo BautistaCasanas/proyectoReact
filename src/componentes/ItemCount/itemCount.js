@@ -43,7 +43,7 @@ return <>
     <button className="BotonCounter" onClick={disminuir}>➖</button>
     </div>
     <CardActions sx={{display:"flex", margin:"20px"}}>
-        <Button sx={{margin:"0px",marginTop:"30px"}} color="success" onClick={()=>onAdd({item,qty})}  variant='contained' size="small">Add to Cart</Button>
+        <Button sx={{margin:"0px",marginTop:"30px"}} color="success" onClick={()=>onAdd(item, qty)}  variant='contained' size="small">Add to Cart</Button>
       </CardActions>
     
     

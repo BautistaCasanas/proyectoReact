@@ -17,13 +17,17 @@ const ItemDetail=({item, initial, stock})=> {
 
   const [cart, isInCart]= React.useState(false)
   const {isAuthenticated}= useAuth0();
-  const {addItem} =useContext(CartContext)
+  const {addItem,swalAlertCart} =useContext(CartContext);
 
 
-  const onAdd = ({item,qty}) => {
+  const onAdd = (item, qty) => {
+    const newItem = {
+      item: item,
+      qty: qty
+    };
     if(isAuthenticated){
       isInCart(true);
-      addItem({item,qty})
+      addItem(newItem);
     }else{
       Swal({
         title: "You have to login or register!",
@@ -32,7 +36,6 @@ const ItemDetail=({item, initial, stock})=> {
       });
     }
     }
-
     
 
   return (<><div className='cardDetail'>
@@ -56,7 +59,7 @@ const ItemDetail=({item, initial, stock})=> {
         </Typography>
       </CardContent>
       <div>
-      {!cart ?<ItemCount sx={{display:"flex", justifyContent:"center"}} stock={parseInt(5)} initial={1} onAdd={onAdd}/>
+      {!cart ?<ItemCount sx={{display:"flex", justifyContent:"center"}} stock={parseInt(5)} initial={1} onAdd={onAdd} item={item}/>
       : <Link to={`/Cart`}><Button sx={{margin:"10px"}} color="success" variant='contained'  size="medium">Finish Buying</Button></Link>}
       </div>
       <br/>
