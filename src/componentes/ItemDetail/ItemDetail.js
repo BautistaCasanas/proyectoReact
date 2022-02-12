@@ -17,7 +17,7 @@ const ItemDetail=({item, initial, stock})=> {
 
   const [cart, isInCart]= React.useState(false)
   const {isAuthenticated}= useAuth0();
-  const {addItem,swalAlertCart} =useContext(CartContext);
+  const {addItem} =useContext(CartContext);
 
 
   const onAdd = (item, qty) => {

@@ -1,10 +1,12 @@
 import React, {useState, createContext} from 'react'
 import Swal from 'sweetalert';
+import { useAuth0 } from '@auth0/auth0-react';
 
 export const CartContext = createContext();
 
 export const CartProvider =({children})=> {
     const [items,setItems]=useState([]);
+    const {user}= useAuth0();
 
     const isInCart=(id)=>{
         const found =items.find(item=>item.id === id);
@@ -27,9 +29,30 @@ export const CartProvider =({children})=> {
     const removeItem= (id) => {
         setItems(items.filter(item => item.id !== id))
     }
+  
+    const clearItems =()=>{
+        setItems([]);
+    }
+
+    const total= () => {
+        return items.reduce((acc, total) => acc + total.price * total.qty, 0);
+      };
+
+    const buyItem =()=>{
+        items.map(()=>{
+            clearItems();
+            return Swal({
+                title: "Thanks for buying in AllShop",
+                text:`User: ${user.nickname}, ${user.email}
+                Total: ${total()}`,
+                icon:"success",
+                button: "OK",
+              });
+        })
+    }
 
 return (
-    <CartContext.Provider value={{items,addItem,removeItem}}>
+    <CartContext.Provider value={{items,addItem,removeItem,clearItems,total,buyItem}}>
         {children}
     </CartContext.Provider>
 )
