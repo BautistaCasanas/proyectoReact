@@ -83,7 +83,7 @@ const NavBar = () => {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
           >
-            AllShop
+            <MenuItem  onClick={handleCloseNavMenu} component={Link} to="/">AllShop</MenuItem>
           </Typography>
           
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
