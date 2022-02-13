@@ -1,4 +1,4 @@
-import React,{useContext} from 'react';
+import React,{useContext, useState} from 'react';
 import { CartContext } from '../../context/CartContext';
 import "./Cart.css"
 import Button from '@mui/material/Button';
@@ -8,11 +8,21 @@ const Cart=()=> {
   const {items, removeItem, clearItems,total, buyItem} = useContext(CartContext);
   console.log(items);
 
+  const [msg, setMsg]= useState("");
+  
+    if(items.qty === 0){
+      console.log("no items");
+      setMsg("No items on cart");
+    }
+    console.log(msg);
 
   return <>
     <h1>Cart</h1>
 
       <div className='container'>
+
+        <div>{msg}</div>
+
       <div className='itemContainer'>
         {
           items.map((item,index) => {
@@ -28,7 +38,7 @@ const Cart=()=> {
                 <p>$ {item.price * item.qty}</p>
 
               <div className="itemCartCount">
-              <b>Qty: {item.qty}</b>
+              <b>{item.qty}</b>
               </div> 
 
               <br/>
@@ -43,7 +53,7 @@ const Cart=()=> {
         }
         </div>
         <div className='cartTotal'>
-        <p className='p_Total'><b>Total: {total()}</b></p>
+        <p className='p_Total'><b>Subtotal: ${total()}</b></p>
         
         <div>
         <Button color="error" sx={{width:"10px",height:"50px", margin:"15px"}} variant='contained' onClick={()=>{clearItems()}} size="small">Delete Cart</Button>

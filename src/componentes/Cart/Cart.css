@@ -1,7 +1,8 @@
 .container{
     border: 2px solid black;
     border-radius: 20px;
-    
+    padding: 5px;
+    margin: 5px;
 }
 
 .itemContainer{
@@ -27,6 +28,7 @@
 
 .cartTotal{
     display: flex;
+    flex-wrap: wrap;
     margin: 10px;
     justify-content: space-evenly;
     border-top: 2px solid black;
