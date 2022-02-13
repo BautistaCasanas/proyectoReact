@@ -1,3 +1,12 @@
+.cartEmpty{
+    background-color: rgb(209, 205, 205);
+    margin: 50px;
+    width: 300px;
+    border: 2px solid black;
+    border-radius: 20px;
+    align-items: center;
+}
+
 .container{
     border: 2px solid black;
     border-radius: 20px;

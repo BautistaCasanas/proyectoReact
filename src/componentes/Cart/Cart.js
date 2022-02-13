@@ -1,27 +1,33 @@
 import React,{useContext, useState} from 'react';
 import { CartContext } from '../../context/CartContext';
-import "./Cart.css"
+import "./Cart.css";
 import Button from '@mui/material/Button';
+import { Link } from 'react-router-dom';
+
 
 const Cart=()=> {
 
   const {items, removeItem, clearItems,total, buyItem} = useContext(CartContext);
   console.log(items);
 
-  const [msg, setMsg]= useState("");
   
-    if(items.qty === 0){
-      console.log("no items");
-      setMsg("No items on cart");
-    }
-    console.log(msg);
+  
+  if(items.length<=0){
+    return (
+      <center>
+      <div className='cartEmpty'>
+        <h2>Cart</h2>
+        <h4>Cart empty..</h4>
+        <Link to={ `/Products` }>keep buying</Link>
+      </div>
+      </center>
+    );
+  }
 
   return <>
     <h1>Cart</h1>
 
       <div className='container'>
-
-        <div>{msg}</div>
 
       <div className='itemContainer'>
         {
