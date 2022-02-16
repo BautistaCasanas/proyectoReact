@@ -4,7 +4,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import NotFound from '../componentes/NotFound/notFound';
 import ItemDetailComponent from '../componentes/ItemDetail/ItemDetailComponent';
 import Cart from '../componentes/Cart/Cart';
-
+import ItemListContainer from '../componentes/ItemList/ItemListContainer';
 
 //views
 import Home from '../views/Home';
@@ -22,6 +22,7 @@ const Router = () => {
       <Routes>
         <Route path="/" element={<Home/>}></Route>
         <Route path="/Products" element={<Products/>}></Route>
+        <Route path="/category/:itemCategory" element={<ItemListContainer/>}></Route>
         <Route path="/Contact" element={<Contact/>}></Route>
         <Route path="/detail/:itemID" element={<ItemDetailComponent/>}></Route>
         <Route path="*" element={<NotFound/>} /> 

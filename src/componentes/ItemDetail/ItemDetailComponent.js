@@ -11,6 +11,7 @@ const ItemDetailComponent=()=> {
 
     let {itemID}= useParams();
 
+  //llamo a los items de la api y los busco por el id
     useEffect(()=>{
         fetch('https://fakestoreapi.com/products')
         .then(res=>res.json())

@@ -1,5 +1,5 @@
 import "./Contact.css"
-import Swal from 'sweetalert';
+
 const Contact = () => {
 
        

@@ -19,7 +19,7 @@ const ItemDetail=({item, initial, stock})=> {
   const {isAuthenticated}= useAuth0();
   const {addItem} =useContext(CartContext);
 
-
+  //Agrego al carrito los items
   const onAdd = (item, qty) => {
     const newItem = {
       item: item,

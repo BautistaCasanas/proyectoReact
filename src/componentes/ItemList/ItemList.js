@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 
 
 const ItemList =({items})=>{
-
+//mapeo los items
 return(
     <Box sx={{ display: 'flex',flexDirection: 'row', flexWrap: 'wrap', justifyContent:"center", width:"300", height:"500", margin:"20px", overflow:"hidden"}}>
     { items.map((item)=>(<div key={item.id}><Item  item={item}></Item></div>))}

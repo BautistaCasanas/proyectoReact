@@ -11,7 +11,7 @@ const ItemCount = ({stock, initial, onAdd, item}) => {
     const [qty, setCounter] = React.useState(parseInt(initial));
    
     
-
+//aumento
     const aumentar =()=>{
         if (stock > qty) {
             setCounter(qty + 1);
@@ -25,6 +25,7 @@ const ItemCount = ({stock, initial, onAdd, item}) => {
         }
     }
 
+//disminuye
     const disminuir = () => {
         if (qty > initial) {
             setCounter(qty - 1);

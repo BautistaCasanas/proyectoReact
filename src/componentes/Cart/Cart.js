@@ -10,8 +10,7 @@ const Cart=()=> {
   const {items, removeItem, clearItems,total, buyItem} = useContext(CartContext);
   console.log(items);
 
-  
-  
+  //Si el carrito esta vacio, me avisa y hay un boton para seguir comprando
   if(items.length<=0){
     return (
       <center>
@@ -23,6 +22,10 @@ const Cart=()=> {
       </center>
     );
   }
+
+  
+
+
 
   return <>
     <h1>Cart</h1>
@@ -37,10 +40,10 @@ const Cart=()=> {
 
             <div className='ulCartItems'>
             
-                <p><img src={item.image} width="100" alt="ItemProduct"/></p>
+              <p><img src={item.image} width="100" alt="ItemProduct"/></p>
 
-              <div className='dataItemCart'>
-              <b>{item.title}</b>
+            <div className='dataItemCart'>
+                <b>{item.title}</b>
                 <p>$ {item.price * item.qty}</p>
 
               <div className="itemCartCount">

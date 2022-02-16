@@ -18,6 +18,8 @@ import { useAuth0 } from '@auth0/auth0-react';
 const Item =({item, onAdd})=> {
 
   const {isAuthenticated,user}= useAuth0();
+
+//Swal al comprar
 const swalAlert =()=>{
  if(isAuthenticated){
   Swal({

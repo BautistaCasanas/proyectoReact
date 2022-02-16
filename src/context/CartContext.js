@@ -38,17 +38,22 @@ export const CartProvider =({children})=> {
         return items.reduce((acc, total) => acc + total.price * total.qty, 0);
       };
 
+
     const buyItem =()=>{
-        items.map(()=>{
-            clearItems();
+        items.map((item)=>{
+            console.log(items)
             return Swal({
                 title: "Thanks for buying in AllShop",
                 text:`User: ${user.nickname}, ${user.email}
-                Total: ${total()}`,
+                
+                Purchase: ${item.qty}, ${item.title}
+                
+                Total: ${total()}$`,
                 icon:"success",
                 button: "OK",
               });
-        })
+        });
+        clearItems();
     }
 
 return (

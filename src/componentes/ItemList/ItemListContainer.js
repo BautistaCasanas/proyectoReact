@@ -8,8 +8,9 @@ const ItemListContainer = (props) => {
     const [items, setItems] = React.useState([]);
     const [isLoading, setIsLoading] = React.useState(true);
 
+    
     useEffect(()=>{
-
+        //LLamo a los productos de la Api
         fetch('https://fakestoreapi.com/products')
             .then(res=>res.json())
             .then(json=>setItems(json));
