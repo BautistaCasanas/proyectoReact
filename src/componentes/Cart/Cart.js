@@ -45,7 +45,7 @@ const Cart=()=> {
             <div className='dataItemCart'>
                 <b>{item.title}</b>
                 <p>$ {item.price * item.qty}</p>
-
+              
               <div className="itemCartCount">
               <b>{item.qty}</b>
               </div> 
@@ -62,7 +62,7 @@ const Cart=()=> {
         }
         </div>
         <div className='cartTotal'>
-        <p className='p_Total'><b>Subtotal: ${total()}</b></p>
+        <div className='p_Total'><b>Subtotal: ${total()}</b></div>
         
         <div>
         <Button color="error" sx={{width:"10px",height:"50px", margin:"15px"}} variant='contained' onClick={()=>{clearItems()}} size="small">Delete Cart</Button>

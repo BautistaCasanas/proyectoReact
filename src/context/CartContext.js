@@ -19,7 +19,7 @@ export const CartProvider =({children})=> {
             setItems(items.map((prod)=>{
                 if(prod.id === item.id){
                     prod.qty += qty
-                }
+                } 
                 return prod
             }))
             :

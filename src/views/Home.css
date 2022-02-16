@@ -4,3 +4,81 @@
     box-sizing: border-box;
 }
 
+.catalogoContainer{
+    display: flex;
+    flex-wrap: wrap;
+    height: 150px; 
+}
+
+.buttonCatalogo{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-image: url("https://img.freepik.com/vector-gratis/conjunto-bocetos-hermosos-diversos-atuendos-moda-femenina_1150-50902.jpg?w=1380");
+    background-size: cover;
+    background-position: center 10%;
+    
+}
+.buttonCatalogo:hover{
+    opacity: 0.7;
+    transition: 0s;
+}
+
+.buttonCatalogo1{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-image: url("https://mensandbeauty.com/wp-content/uploads/2019/03/moda-hombre-prendas-calzado-ropa-complementos-2.jpg.webp");
+    background-size: cover;
+    background-position: center 10%;
+}
+.buttonCatalogo1:hover{
+    opacity: 0.7;
+    transition: 0s;
+}
+.buttonCatalogo2{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-image: url("https://scontent.faep14-2.fna.fbcdn.net/v/t39.30808-1/255275602_4855082431192160_6945914501260371590_n.jpg?stp=dst-jpg_p720x720&_nc_cat=105&ccb=1-5&_nc_sid=1eb0c7&_nc_ohc=HUyK9QQZjzoAX833cTF&_nc_ht=scontent.faep14-2.fna&oh=00_AT_mwwFVxjfFXZx7ASgVM9mEW5NHTThY80Qow3mquQT4zA&oe=62108812");
+    background-size: contain ;
+    background-position: center 50%;
+    
+}
+.buttonCatalogo2:hover{
+    opacity: 0.7;
+    transition: 0s;
+}
+.buttonCatalogo3{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url("https://www.tecnologia-informatica.com/wp-content/uploads/2018/07/funciones-de-la-computadora-1.jpeg");
+    background-size: cover;
+    background-position: center 20%;
+}
+.buttonCatalogo3:hover{
+    opacity: 0.7;
+    transition: 0s;
+}
+
+
+.clotheButton{
+    padding: 10px;
+    border: 2px black solid;
+    background-color: rgba(255, 255, 255, 0.404);
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+}
+
+
+
