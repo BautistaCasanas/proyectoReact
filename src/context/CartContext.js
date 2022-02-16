@@ -48,7 +48,7 @@ export const CartProvider =({children})=> {
                 
                 Purchase: ${item.qty}, ${item.title}
                 
-                Total: ${total()}$`,
+                Total: ${parseInt(total())}$`,
                 icon:"success",
                 button: "OK",
               });
