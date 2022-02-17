@@ -37,7 +37,6 @@ const swalAlert =()=>{
  }
   
 }
-
   return (
     <Card  sx={{ width: 270, height:480, margin:"30px",boxShadow:" 0 10px 10px rgba(0, 0, 0, 0.4)", borderRadius:"20px"}}>
     <CardMedia sx={{objectFit:"contain"}}

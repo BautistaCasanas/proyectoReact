@@ -8,13 +8,13 @@ import './itemCounter.css';
 const ItemCount = ({stock, initial, onAdd, item}) => {
 
 
-    const [qty, setCounter] = React.useState(parseInt(initial));
+    const [qty, setQty] = React.useState(parseInt(initial));
    
     
 //aumento
     const aumentar =()=>{
-        if (stock > qty) {
-            setCounter(qty + 1);
+        if (item.stock > qty) {
+            setQty(qty + 1);
         }else{
             Swal({
                 title: 'Available',
@@ -28,7 +28,7 @@ const ItemCount = ({stock, initial, onAdd, item}) => {
 //disminuye
     const disminuir = () => {
         if (qty > initial) {
-            setCounter(qty - 1);
+            setQty(qty - 1);
             }
         };
 
@@ -36,7 +36,7 @@ const ItemCount = ({stock, initial, onAdd, item}) => {
 return <>
     
     <div className="itemCounter">
-    <div><b>Stock:</b><b>{stock}</b></div>
+    <div><b>Stock:</b><b>{item.stock}</b></div>
     <br/>
     <div className="counter">
     <button className="BotonCounter" onClick={aumentar}>➕</button>

@@ -39,20 +39,19 @@ export const CartProvider =({children})=> {
       };
 
 
-    const buyItem =()=>{
-        items.map((item)=>{
-            console.log(items)
-            return Swal({
-                title: "Thanks for buying in AllShop",
-                text:`User: ${user.nickname}, ${user.email}
-                
-                Purchase: ${item.qty}, ${item.title}
-                
-                Total: ${parseInt(total())}$`,
-                icon:"success",
-                button: "OK",
-              });
-        });
+      const buyItem =()=>{
+        Swal({
+            title: "Thanks for buying in AllShop",
+            text:`User: ${user.nickname}, ${user.email}
+            
+            Purchase: ${items.map((item)=>{
+                return `
+                °${item.qty} ${item.title}`
+            })}
+            Total: ${parseInt(total())}$`,
+            icon:"success",
+            button: "OK",
+            });
         clearItems();
     }
 

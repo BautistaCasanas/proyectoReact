@@ -18,7 +18,6 @@ const ItemDetail=({item, initial, stock})=> {
   const [cart, isInCart]= React.useState(false)
   const {isAuthenticated}= useAuth0();
   const {addItem} =useContext(CartContext);
-
   //Agrego al carrito los items
   const onAdd = (item, qty) => {
     const newItem = {
@@ -37,7 +36,7 @@ const ItemDetail=({item, initial, stock})=> {
     }
     }
     
-
+    
   return (<><div className='cardDetail'>
     <Card sx={{ width:"50%",margin:"50px", display:"flex", flexFlow:"column", borderRadius:"20px",boxShadow:" 0 10px 10px rgba(0, 0, 0, 0.4)", gap:"20px"}}>
 
@@ -45,7 +44,7 @@ const ItemDetail=({item, initial, stock})=> {
         component="img"
         image={item?.image}
         height={250}
-        alt="green iguana"
+        alt="Product"
       />
       <CardContent sx={{display:"flex", flexWrap:"wrap"}}>
         <Typography  variant="h5" component="div">
@@ -59,7 +58,7 @@ const ItemDetail=({item, initial, stock})=> {
         </Typography>
       </CardContent>
       <div>
-      {!cart ?<ItemCount sx={{display:"flex", justifyContent:"center"}} stock={parseInt(5)} initial={1} onAdd={onAdd} item={item}/>
+      {!cart ?<ItemCount sx={{display:"flex", justifyContent:"center"}} stock={item.stock} initial={1} onAdd={onAdd} item={item}/>
       : <Link to={`/Cart`}><Button sx={{margin:"10px"}} color="success" variant='contained'  size="medium">Finish Buying</Button></Link>}
       </div>
       <br/>

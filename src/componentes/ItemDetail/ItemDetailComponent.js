@@ -3,25 +3,32 @@ import ItemDetail from '../ItemDetail/ItemDetail';
 import { useParams } from 'react-router';
 import Spinner from '../Spinner/Spinner';
 
+//firebase-firestore
+import {getDoc, getFirestore,doc} from "firebase/firestore";
+ 
+
 const ItemDetailComponent=()=> {
 
     const [item, setItem]=useState({});
-    // const [items, setItems]=useState([]);
+
     const [loading, setLoading]=useState(true);
 
     let {itemID}= useParams();
 
-  //llamo a los items de la api y los busco por el id
-    useEffect(()=>{
-        fetch('https://fakestoreapi.com/products')
-        .then(res=>res.json())
-        .then(json=>{
-            setItem(json.find(item=>item.id===Number(itemID)))
-          })
-        .catch(err=>console.log(err)) 
-        .finally(()=>setLoading(false)) 
-        
-    },[itemID])
+  //llamo a los items del firestore  y los busco por el id
+    
+    useEffect(() => {
+      const db = getFirestore();
+      const itemRef = doc(db, "allshop", itemID);
+      getDoc(itemRef).then(docSnapshot => {
+          if(docSnapshot.exists()) {
+              setItem({id: docSnapshot.id, ...docSnapshot.data()});
+          }
+      });
+      setTimeout(() => {
+              setLoading(false);
+            }, 2000);
+  }, [itemID]);
 
   return (<>
   {loading ? <Spinner /> : <ItemDetail item={item} />}
