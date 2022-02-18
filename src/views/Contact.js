@@ -1,4 +1,12 @@
 import "./Contact.css"
+import { MenuItem } from '@mui/material';
+import { Link } from 'react-router-dom';
+
+
+import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
+import WhatsappRoundedIcon from '@mui/icons-material/WhatsappRounded';
+import EmailRoundedIcon from '@mui/icons-material/EmailRounded';
+import TwitterIcon from '@mui/icons-material/Twitter';
 
 const Contact = () => {
 
@@ -17,6 +25,16 @@ const Contact = () => {
                             <textarea name="textarea" id="" cols="15" rows="5" placeholder="Comment.."></textarea>                   
                             <input type="submit" name="enviar" value="Send" id="boton"/>   
     </form>
+    <div className="social">
+
+            <ul>
+              <li className="socialLi"><MenuItem className="icon" component={Link} to="/"><FacebookRoundedIcon sx={{cursor:"pointer", background:"blue", color:"white"}}  color="primary" fontSize="large"/></MenuItem></li>
+              <li className="socialLi"><MenuItem className="icon" component={Link} to="/"><WhatsappRoundedIcon sx={{cursor:"pointer", background:"green", color:"white"}}  color="success" fontSize="large"/></MenuItem></li>
+              <li className="socialLi"><MenuItem className="icon" component={Link} to="/"><EmailRoundedIcon    sx={{cursor:"pointer", background:"red", color:"white"}}  color="error" fontSize="large"/></MenuItem></li>
+              <li className="socialLi"><MenuItem className="icon" component={Link} to="/"><TwitterIcon         sx={{cursor:"pointer", background:"blue", color:"white"}}  color="primary" fontSize="large"/></MenuItem></li>
+            </ul>
+
+        </div>
     </main>
     </>
   };

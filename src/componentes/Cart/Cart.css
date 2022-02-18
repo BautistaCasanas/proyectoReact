@@ -49,3 +49,9 @@
     background-color: rgb(147, 229, 147);
     margin-top: 20px;
 }
+.itemCartCount{
+    display: flex;
+    margin-top: 7px;
+    gap: 5px;
+}
+

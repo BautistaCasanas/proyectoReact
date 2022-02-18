@@ -1,14 +1,17 @@
 import React,{useContext, useState} from 'react';
 import { CartContext } from '../../context/CartContext';
-import "./Cart.css";
+import "./Cart.css"
 import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
+
 
 
 const Cart=()=> {
 
   const {items, removeItem, clearItems,total, buyItem} = useContext(CartContext);
   console.log(items);
+  
+  
 
   //Si el carrito esta vacio, me avisa y hay un boton para seguir comprando
   if(items.length<=0){
@@ -23,8 +26,7 @@ const Cart=()=> {
     );
   }
 
-  
-
+ 
 
 
   return <>
@@ -71,6 +73,7 @@ const Cart=()=> {
 
         </div>
         </div>
+
 
   </>;
 }

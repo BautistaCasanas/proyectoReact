@@ -10,7 +10,12 @@ import './ItemDetail.css';
 import { useAuth0 } from '@auth0/auth0-react';
 import Swal from 'sweetalert';
 import { CartContext } from "../../context/CartContext";
+import { MenuItem } from '@mui/material';
 
+import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
+import WhatsappRoundedIcon from '@mui/icons-material/WhatsappRounded';
+import EmailRoundedIcon from '@mui/icons-material/EmailRounded';
+import TwitterIcon from '@mui/icons-material/Twitter';
 
 
 const ItemDetail=({item, initial, stock})=> {
@@ -59,10 +64,20 @@ const ItemDetail=({item, initial, stock})=> {
       </CardContent>
       <div>
       {!cart ?<ItemCount sx={{display:"flex", justifyContent:"center"}} stock={item.stock} initial={1} onAdd={onAdd} item={item}/>
-      : <Link to={`/Cart`}><Button sx={{margin:"10px"}} color="success" variant='contained'  size="medium">Finish Buying</Button></Link>}
+      : <Link to={`/Cart`}><Button sx={{margin:"10px"}} color="success" variant='contained' initial={1} size="medium">Finish Buying</Button></Link>}
       </div>
       <br/>
     </Card>
+    </div>
+    <div className="social">
+
+      <ul>
+          <li className="socialLi"><MenuItem className="icon" component={Link} to="/"><FacebookRoundedIcon sx={{cursor:"pointer", background:"blue", color:"white"}}  color="primary" fontSize="large"/></MenuItem></li>
+          <li className="socialLi"><MenuItem className="icon" component={Link} to="/"><WhatsappRoundedIcon sx={{cursor:"pointer", background:"green", color:"white"}}  color="success" fontSize="large"/></MenuItem></li>
+          <li className="socialLi"><MenuItem className="icon" component={Link} to="/"><EmailRoundedIcon    sx={{cursor:"pointer", background:"red", color:"white"}}  color="error" fontSize="large"/></MenuItem></li>
+          <li className="socialLi"><MenuItem className="icon" component={Link} to="/"><TwitterIcon         sx={{cursor:"pointer", background:"blue", color:"white"}}  color="primary" fontSize="large"/></MenuItem></li>
+      </ul>
+
     </div>
     {console.log(item)}
     </>

@@ -3,6 +3,10 @@ import ItemDetail from '../ItemDetail/ItemDetail';
 import { useParams } from 'react-router';
 import Spinner from '../Spinner/Spinner';
 
+
+
+
+
 //firebase-firestore
 import {getDoc, getFirestore,doc} from "firebase/firestore";
  
@@ -32,7 +36,6 @@ const ItemDetailComponent=()=> {
 
   return (<>
   {loading ? <Spinner /> : <ItemDetail item={item} />}
-
   </>);
 }
 
