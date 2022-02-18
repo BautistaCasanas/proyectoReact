@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import "./ItemList.css"
 
 import { MenuItem } from '@mui/material';
-import { Link } from 'react-router-dom';
+
 
 
 
@@ -23,10 +23,10 @@ return(<>
     <div className="social">
 
             <ul>
-              <li className="socialLi"><MenuItem className="icon" component={Link} to="/"><FacebookRoundedIcon sx={{cursor:"pointer", background:"blue", color:"white"}}  color="primary" fontSize="large"/></MenuItem></li>
-              <li className="socialLi"><MenuItem className="icon" component={Link} to="/"><WhatsappRoundedIcon sx={{cursor:"pointer", background:"green", color:"white"}}  color="success" fontSize="large"/></MenuItem></li>
-              <li className="socialLi"><MenuItem className="icon" component={Link} to="/"><EmailRoundedIcon    sx={{cursor:"pointer", background:"red", color:"white"}}  color="error" fontSize="large"/></MenuItem></li>
-              <li className="socialLi"><MenuItem className="icon" component={Link} to="/"><TwitterIcon         sx={{cursor:"pointer", background:"blue", color:"white"}}  color="primary" fontSize="large"/></MenuItem></li>
+              <li className="socialLi"><MenuItem className="icon"><FacebookRoundedIcon sx={{cursor:"pointer", background:"blue", color:"white"}}  color="primary" fontSize="large"/></MenuItem></li>
+              <li className="socialLi"><MenuItem className="icon"><WhatsappRoundedIcon sx={{cursor:"pointer", background:"green", color:"white"}}  color="success" fontSize="large"/></MenuItem></li>
+              <li className="socialLi"><MenuItem className="icon"><EmailRoundedIcon    sx={{cursor:"pointer", background:"red", color:"white"}}  color="error" fontSize="large"/></MenuItem></li>
+              <li className="socialLi"><MenuItem className="icon"><TwitterIcon         sx={{cursor:"pointer", background:"blue", color:"white"}}  color="primary" fontSize="large"/></MenuItem></li>
             </ul>
 
         </div>

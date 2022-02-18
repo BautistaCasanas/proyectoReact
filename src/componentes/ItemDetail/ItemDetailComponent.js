@@ -4,9 +4,6 @@ import { useParams } from 'react-router';
 import Spinner from '../Spinner/Spinner';
 
 
-
-
-
 //firebase-firestore
 import {getDoc, getFirestore,doc} from "firebase/firestore";
  
@@ -19,7 +16,7 @@ const ItemDetailComponent=()=> {
 
     let {itemID}= useParams();
 
-  //llamo a los items del firestore  y los busco por el id
+  //llamo a los items del firestore  y los filtro por el id
     
     useEffect(() => {
       const db = getFirestore();
