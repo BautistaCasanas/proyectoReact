@@ -106,3 +106,35 @@
     transition: all 500ms ease;
 }
 
+.allContainer{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(245, 222, 179, 0.411);
+    justify-content: center;
+    gap: 50px;
+}
+
+
+.comingSoon{
+    font-family: 'Times New Roman', Times, serif;
+    position: center;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.158);
+}
+
+.boxComingSoon{
+    background: rgba(0, 0, 0, 0.377);
+}
+
+
+.comingSoonTitle{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+.comingSoonTitleCars{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    margin-top: 20px;
+}

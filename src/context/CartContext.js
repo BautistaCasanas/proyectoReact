@@ -42,7 +42,11 @@ export const CartProvider =({children})=> {
       const buyItem =()=>{
         Swal({
             title: "Thanks for buying in AllShop",
-            text:`User: ${user.nickname}, ${user.email}
+            text:`User: ${user.nickname}
+                Email:${user.email}
+                Phone: +5491138654825
+
+            Your purchase ID: N9TT-9G0A-B7FQ
             
             Purchase: ${items.map((item)=>{
                 return `

@@ -1,4 +1,4 @@
-import React,{useContext, useState} from 'react';
+import React,{useContext} from 'react';
 import { CartContext } from '../../context/CartContext';
 import "./Cart.css"
 import Button from '@mui/material/Button';
@@ -30,8 +30,6 @@ const Cart=()=> {
 
 
   return <>
-    <h1>Cart</h1>
-
       <div className='container'>
 
       <div className='itemContainer'>
