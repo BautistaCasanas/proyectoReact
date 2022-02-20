@@ -38,6 +38,7 @@ export const CartProvider =({children})=> {
         return items.reduce((acc, total) => acc + total.price * total.qty, 0);
       };
 
+      const uniqueId = () => parseInt(Date.now() * Math.random(), 10).toString();
 
       const buyItem =()=>{
         Swal({
@@ -46,7 +47,7 @@ export const CartProvider =({children})=> {
                 Email:${user.email}
                 Phone: +5491138654825
 
-            Your purchase ID: N9TT-9G0A-B7FQ
+            Your purchase ID: ${uniqueId()}
             
             Purchase: ${items.map((item)=>{
                 return `
