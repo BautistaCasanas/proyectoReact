@@ -43,6 +43,7 @@ export const CartProvider =({children})=> {
       const buyItem =()=>{
         Swal({
             title: "Thanks for buying in AllShop",
+            
             text:`User: ${user.nickname}
                 Email:${user.email}
                 Phone: +5491138654825
@@ -53,6 +54,7 @@ export const CartProvider =({children})=> {
                 return `
                 °${item.qty} ${item.title}`
             })}
+
             Total: ${parseInt(total())}$`,
             icon:"success",
             button: "OK",
@@ -61,7 +63,7 @@ export const CartProvider =({children})=> {
     }
 
 return (
-    <CartContext.Provider value={{items,addItem,removeItem,clearItems,total,buyItem}}>
+    <CartContext.Provider value={{items,addItem,removeItem,clearItems,total,buyItem,uniqueId}}>
         {children}
     </CartContext.Provider>
 )

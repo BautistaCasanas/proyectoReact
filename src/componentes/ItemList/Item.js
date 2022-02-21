@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React,{ useContext } from 'react';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -11,20 +11,32 @@ import './Item.css';
 import {Link} from "react-router-dom";
 import Swal from 'sweetalert';
 import { useAuth0 } from '@auth0/auth0-react';
-
+import { CartContext } from "../../context/CartContext";
 
 
 
 const Item =({item, onAdd})=> {
 
   const {isAuthenticated,user}= useAuth0();
+  const {uniqueId}= useContext(CartContext)
 
 //Swal al comprar
 const swalAlert =()=>{
  if(isAuthenticated){
   Swal({
     title: "Your purchase has been successful",
-    text: `Thanks ${user.nickname} for buying: ${item?.title}`,
+
+    text: `User: ${user.nickname}
+    Email: ${user.email}
+    Phone: +5491138654825
+
+    Purchase ID: ${uniqueId()}
+
+    Purchase: 1 - ${item?.title}
+    
+    Total: $${item.price}
+    `,
+
     icon: "success",
     button: "Keep Buying",
   })

@@ -9,6 +9,7 @@ const App = () => {
       <CartProvider>
         <Router />
       </CartProvider>
+
     </>
   );
 };
