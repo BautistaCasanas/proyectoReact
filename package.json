@@ -2,7 +2,7 @@
   "name": "myapp",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://BautistaCasanas.github.io/myapp",
+  "homepage": "http://BautistaCasanas.github.io",
   "dependencies": {
     "@auth0/auth0-react": "^1.9.0",
     "@emotion/react": "^11.7.1",
