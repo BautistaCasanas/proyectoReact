@@ -12,7 +12,7 @@ const CartWidget = () => {
   //cantidad de items en el carrito
   let itemsInCart=0;
   items.map((item)=>{
-    itemsInCart = itemsInCart + item.qty;
+    return(itemsInCart = itemsInCart + item.qty)
   })
 
  

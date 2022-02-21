@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import Spinner from '../componentes/Spinner/Spinner';
 import ItemList from '../componentes/ItemList/ItemList';
-import { collection, getDoc, getDocs, getFirestore, query, where } from 'firebase/firestore';
+import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore';
 
 const Category=()=> {
 
