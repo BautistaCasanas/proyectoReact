@@ -28,7 +28,6 @@ const swalAlert =()=>{
 
     text: `User: ${user.nickname}
     Email: ${user.email}
-    Phone: +5491138654825
 
     Purchase ID: ${uniqueId()}
 

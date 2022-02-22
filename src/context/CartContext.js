@@ -38,16 +38,19 @@ export const CartProvider =({children})=> {
         return items.reduce((acc, total) => acc + total.price * total.qty, 0);
       };
 
+        
+
+
       const uniqueId = () => parseInt(Date.now() * Math.random(), 10).toString();
 
       const buyItem =()=>{
         Swal({
             title: "Thanks for buying in AllShop",
             
-            text:`User: ${user.nickname}
+            text:`
+                User: ${user.nickname}
                 Email:${user.email}
-                Phone: +5491138654825
-
+                
             Your purchase ID: ${uniqueId()}
             
             Purchase: ${items.map((item)=>{
