@@ -9,7 +9,7 @@ export const CartProvider =({children})=> {
     const {user}= useAuth0();
 
     const isInCart=(id)=>{
-        const found =items.find(item=>item.id === id);
+        const found =items.find(item=> item.id === id);
         return found;
     }
         
