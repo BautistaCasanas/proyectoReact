@@ -4,7 +4,8 @@
 
 AllShop is an ecommerce of different articles, within it you will find women's clothing, men's clothing, jewelry and household appliances.
 
-For this Proyect I used: React-router-dom, MaterialUI, Auth0
+
+For this Proyect I used: React-router-dom(To link all components of the project), MaterialUI(use it to add style to the project), Auth0(To have a user access)
 ## Authors
 
 - Github [@bautistacasañas](https://www.github.com/bautistacasanas)

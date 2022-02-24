@@ -12,6 +12,8 @@ import Swal from 'sweetalert';
 import { CartContext } from "../../context/CartContext";
 import { MenuItem } from '@mui/material';
 
+
+
 import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 import WhatsappRoundedIcon from '@mui/icons-material/WhatsappRounded';
 import EmailRoundedIcon from '@mui/icons-material/EmailRounded';
@@ -23,6 +25,8 @@ const ItemDetail=({item, initial, stock})=> {
   const [cart, isInCart]= React.useState(false)
   const {isAuthenticated}= useAuth0();
   const {addItem} =useContext(CartContext);
+  
+
   //Agrego al carrito los items
   const onAdd = (item, qty) => {
     const newItem = {
@@ -39,6 +43,7 @@ const ItemDetail=({item, initial, stock})=> {
         button: "OK",
       });
     }
+
     }
     
     
@@ -63,11 +68,14 @@ const ItemDetail=({item, initial, stock})=> {
         </Typography>
       </CardContent>
       <div>
-      {!cart ?<ItemCount sx={{display:"flex", justifyContent:"center"}} stock={item.stock} initial={1} onAdd={onAdd} item={item}/>
+      {!cart ?<ItemCount sx={{display:"flex", justifyContent:"center"}}  stock={item.stock} initial={1} onAdd={onAdd} item={item}/>
       : <Link to={`/Cart`}><Button sx={{margin:"10px"}} color="success" variant='contained' initial={1} size="medium">Finish Buying</Button></Link>}
       </div>
       <br/>
     </Card>
+    </div>
+    
+    <div>
     </div>
     <div className="social">
 
@@ -79,7 +87,7 @@ const ItemDetail=({item, initial, stock})=> {
       </ul>
 
     </div>
-    {console.log(item)}
+
     </>
   );
 }

@@ -29,7 +29,6 @@ const Shop = () => {
 
   const onSubmit = async (e) => {
 		e.preventDefault();
-		console.log(values);
 		const docRef = await addDoc(collection(db, 'purchases'), {
 			values,
 		});
