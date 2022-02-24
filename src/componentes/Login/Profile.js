@@ -9,7 +9,6 @@ const Profile=()=> {
     if(isLoading){
         return <p>Loading..</p>
     }
-    console.log(user)
     return(<>
         {isAuthenticated && ( 
             <div className='containerProfile'>

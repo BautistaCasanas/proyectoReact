@@ -5,7 +5,6 @@ import MenuItem from '@mui/material/MenuItem';
 const LogoutAuth0=()=> {
 
 const { logout }= useAuth0();
-console.log(useAuth0())
   return  <MenuItem onClick={()=>logout({returnTo: window.location.origin})}>Logout</MenuItem>
 }
 

@@ -2,6 +2,7 @@ import React, {useState, createContext} from 'react'
 import Swal from 'sweetalert';
 import { useAuth0 } from '@auth0/auth0-react';
 
+
 export const CartContext = createContext();
 
 export const CartProvider =({children})=> {
@@ -41,7 +42,7 @@ export const CartProvider =({children})=> {
         
 
 
-      const uniqueId = () => parseInt(Date.now() * Math.random(), 10).toString();
+      
 
       const buyItem =()=>{
         Swal({
@@ -50,23 +51,20 @@ export const CartProvider =({children})=> {
             text:`
                 User: ${user.nickname}
                 Email:${user.email}
-                
-            Your purchase ID: ${uniqueId()}
             
             Purchase: ${items.map((item)=>{
                 return `
                 °${item.qty} ${item.title}`
-            })}
-
+            })}n 
             Total: ${parseInt(total())}$`,
             icon:"success",
             button: "OK",
             });
-        clearItems();
+            // clearItems()
     }
 
 return (
-    <CartContext.Provider value={{items,addItem,removeItem,clearItems,total,buyItem,uniqueId}}>
+    <CartContext.Provider value={{items,addItem,removeItem,clearItems,total,buyItem}}>
         {children}
     </CartContext.Provider>
 )

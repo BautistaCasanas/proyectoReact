@@ -32,7 +32,6 @@ const Category=()=> {
 
 
   return (<>
-  {console.log(items)}
   {loading ? <Spinner /> : <ItemList items={items} />}
 
   </>);

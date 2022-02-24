@@ -11,14 +11,13 @@ import './Item.css';
 import {Link} from "react-router-dom";
 import Swal from 'sweetalert';
 import { useAuth0 } from '@auth0/auth0-react';
-import { CartContext } from "../../context/CartContext";
 
 
 
 const Item =({item, onAdd})=> {
 
   const {isAuthenticated,user}= useAuth0();
-  const {uniqueId}= useContext(CartContext)
+  const uniqueId = () => parseInt(Date.now() * Math.random(), 10).toString();
 
 //Swal al comprar
 const swalAlert =()=>{

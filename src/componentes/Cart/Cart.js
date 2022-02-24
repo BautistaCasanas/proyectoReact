@@ -8,8 +8,8 @@ import { Link } from 'react-router-dom';
 
 const Cart=()=> {
 
-  const {items, removeItem, clearItems,total, buyItem} = useContext(CartContext);
-  console.log(items);
+  const {items, removeItem, clearItems,total} = useContext(CartContext);
+  
   
   
 
@@ -66,7 +66,7 @@ const Cart=()=> {
         
         <div>
         <Button color="error" sx={{width:"10px",height:"50px", margin:"15px"}} variant='contained' onClick={()=>{clearItems()}} size="small">Delete Cart</Button>
-        <Button color="success" sx={{width:"40px"}} variant='contained' onClick={()=>{buyItem()}} size="small">Buy</Button>
+        <Button color="success" sx={{width:"40px"}} variant='contained' component={Link} to={"/Shop"} size="small">Buy</Button>
         </div>
 
         </div>

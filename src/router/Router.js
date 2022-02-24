@@ -11,12 +11,12 @@ import Home from '../views/Home';
 import Products from '../views/Products';
 import Contact from '../views/Contact';
 import Category from '../views/Category';
+import Shop from '../views/Shop/Shop';
 
 const Router = () => {
 
   return (
     <>
-   
     <BrowserRouter>
         <NavBar/>
       <Routes>
@@ -27,6 +27,8 @@ const Router = () => {
         <Route path="/detail/:itemID" element={<ItemDetailComponent/>}></Route>
         <Route path="*" element={<NotFound/>} /> 
         <Route path="/Cart" element={<Cart/>}/>
+        <Route path="/Shop" element={<Shop/>}/>
+
       </Routes>
       </BrowserRouter>
       

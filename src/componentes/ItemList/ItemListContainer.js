@@ -15,7 +15,6 @@ const ItemListContainer = (props) => {
   const [items, setItems] = React.useState([]);
   const [isLoading, setIsLoading] = React.useState(true);
 
-  console.log(items);
   useEffect(() => {
     
     //Traigo los productos del firebase
