@@ -9,6 +9,12 @@ const App = () => {
       <CartProvider>
         <Router />
       </CartProvider>
+
+      <footer>
+        <center>
+          <h3 style={{marginTop:"100px"}}>By Bautista Casañas</h3>
+        </center>
+      </footer>
     </>
   );
 };

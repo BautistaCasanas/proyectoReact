@@ -50,6 +50,7 @@ export const CartProvider = ({ children }) => {
               return `
                 °${item.qty} ${item.title}`;
             })}n 
+            
             Total: ${parseInt(total())}$`,
       icon: "success",
       button: "OK",

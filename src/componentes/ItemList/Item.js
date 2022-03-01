@@ -6,7 +6,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import VisibilityIcon from "@mui/icons-material/Visibility";
-// import ItemCount from '../ItemCount/itemCount';
+
 import "./Item.css";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert";

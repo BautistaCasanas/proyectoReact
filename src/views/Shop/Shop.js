@@ -4,6 +4,7 @@ import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../firebase/FireBase";
 import swal from "sweetalert";
 import MessageID from "../../componentes/MessageID/MessageID";
+
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import { TextField } from "@mui/material";
@@ -31,7 +32,6 @@ const Shop = () => {
     const docRef = await addDoc(collection(db, "purchases"), {
       values,
     });
-    console.log("Document written with ID: ", docRef.id);
     setPurchaseID(docRef.id);
     setValues(initialState);
   };
