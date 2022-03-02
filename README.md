@@ -16,7 +16,6 @@ For this Proyect I used: React-router-dom(To link all components of the project)
 
 
 ## 🚀 About Me
-I'm a full stack developer...
 
 🎯 I want to work in a company, to develop in the professional field and thus be able to obtain more experience.
 
